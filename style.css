@@ -10,63 +10,142 @@ body {
   font-family: Roboto, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  
-
+  /* justify-content:space-between; */
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .body-content{
     display: flex;
     flex-direction: column;
     gap: 64px;
-    
-    
+    /* justify-content: flex-start;  */
 }
 
 header {
     display: flex;
-    background-color: cadetblue;
+    background-color: #1F2937;
+    padding:0 240px 120px 240px;
+    
+    
 }
-h1 {
-    padding: 16px;
+header h1 {
+    padding: 16px 16px;
+    font-size: 24px;
+    color:#F9FAF8;
+    
 }
-ul {
+
+a::after {
+    padding: 16px 16px;
+    font-size: 24px;
+    color:#F9FAF8;
+}
+ul  {
     margin-left: auto;
     list-style: none;
     display: flex;
     gap: 6px;
     padding: 16px;  
+    
 
+}
+
+a {
+    padding: 16px 16px;
+    font-size: 24px;
+    color:#E5E7EB;
+    text-decoration: none;
 }
 
 .first-div {
     display: flex;
-    justify-content: center;
-    gap: 16px;
+    /* justify-content: center; */
+    align-items: center;
+    padding:0 240px 120px 240px;
+    /* flex-flow: row wrap; */
+    flex: 1 1 auto;
+    gap: 240px;
+    background-color: #1F2937;
+    /* margin-bottom: auto; */
+    
+    /* border: 5px solid yellow;; */
 }
+
+.first-div .left-content h1 {
+    font-size:48px;
+    font-weight: extra-bold;
+    color: #F9FAF8;
+}
+
+.first-div p {
+    font-size: 18px;
+    color:#E5E7EB;
+    font-weight: 200;
+}
+
+.first-div button {
+    background-color: #3882F6;
+    font-size:20px;
+    color: #F9FAF8;
+    padding: 12px;
+    width: 150px;
+    border-radius: 9px;
+    
+}
+
 .left-content {
     display: flex;
     flex-flow: column wrap;
+    width: 50%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     flex: 0 1 auto;
+    /*   */
+    /* border: 1px solid yellow; */
+}
+.right-content {
+    display: flex;
+    width: 50%;
+    /* height: auto; */
+    /* flex-flow: row wrap; */
 }
 
-.left-content button {
-
+.right-content img {
+    height: 100%;
+    width: 100%;
 }
-
 .second-div {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
+    box-sizing: border-box;
+    gap: 32px;
+    
+
+
+}
+
+.card-div {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: center;
+    
+    gap: 16px;
+    
+   
 }
 .second-div .card {
+   
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
     align-items: center;
+    box-sizing: border-box;
+    /* flex-flow: row wrap; */
+    align-items: center;
+    
+    
 }
 
 .second-div h1 {
@@ -74,30 +153,115 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 36px;
+    font-weight: entra-bold;
+    color: #566477;
+    padding: 32px;
+
    
 
 }
-
-.card-div {
+.card {
+    width: 20%;
     display: flex;
-    gap: 16px;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 12px;
+    
+    
+}
+.card-div .card img {
+    height: auto;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.card p {
+    text-align: center;
+    text-justify:newspaper; 
+    padding: 0 34px;
 }
 
 .third-div {
     display: flex;
     justify-content: center;
+    align-items:center;
+    background-color: #b3b3b3;
+    flex-direction: column;
+    padding: 96px;
+    
+   
+}
+
+.third-div :nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 24px;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #1f2937;
+    /* border: 5px solid black; */
+}
+
+.third-div :nth-child(2) {
+    display: flex;
+    justify-content: right;
+    
+    align-items: right;
+    width: 30%;
+    font-size: 24px;
+    font-weight:bold;
+    color: #1f2937;
+    /* border: 5px solid black; */
+    margin-left:22%;
+    
 }
 
 .forth-div {
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    
     align-items: center;
+    padding: 64px;
     /* border: 1px solid black; */
+   
+}
+
+.forth-content {
+    display: flex;
+    flex-direction: row;
+    background-color: #3882F6;
+    border-radius: 9px;
+    color: #F9FAF8;
+    padding: 64px;
+    gap: 500px;
+
+}
+
+.forth-text :nth-child(1) {
+    font-size: 36px;
+    color: #f9faf8;
+}
+
+.forth-content button {
+    background-color: #3882F6;
+    font-size:20px;
+    color: #F9FAF8;
+    padding: 3px;
+    width: 150px;
+    height:50px;
+    border-radius: 9px;
+    border: 2px solid #f9faf8;
+   
+   
 }
 
 footer {
     display: flex;
+    
     justify-content: center;
     padding: 16px;
     background-color: cadetblue;
